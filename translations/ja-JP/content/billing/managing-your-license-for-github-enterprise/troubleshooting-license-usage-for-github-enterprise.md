@@ -10,12 +10,12 @@ topics:
   - Enterprise
   - Licensing
 shortTitle: Troubleshoot license usage
-ms.openlocfilehash: f23ca2380e71f5b037278c71da57dc8fab94c750
-ms.sourcegitcommit: 47bd0e48c7dba1dde49baff60bc1eddc91ab10c5
+ms.openlocfilehash: 8595aaad929e534ebbd474270f3e01f87113b5ec
+ms.sourcegitcommit: aded2711e14a0c2473049d3d7e05c82a74e4c634
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2022
-ms.locfileid: '147572663'
+ms.lasthandoff: 11/21/2022
+ms.locfileid: '148179942'
 ---
 ## 想定外のライセンス使用状況について
 
@@ -27,7 +27,14 @@ ms.locfileid: '147572663'
 
 ## 使用済みライセンスの計算について
 
-{% data variables.product.company_short %} の課金対象は、{% data variables.product.prodname_ghe_server %} のデプロイを使う人、{% data variables.product.prodname_ghe_cloud %} 上の Organization のメンバーである人、または {% data variables.product.prodname_vs_subscriber %} である人です。 ライセンスを使用している Enterprise 内の個人について詳しくは「[ユーザーごとの価格付けについて](/billing/managing-billing-for-your-github-account/about-per-user-pricing)」を参照してください。
+ユーザーが次の条件の 1 つ以上を満たしている場合、{% data variables.product.company_short %} はユーザーに対して課金を行います。
+
+- ユーザーが {% data variables.product.prodname_ghe_server %} のデプロイを利用する
+- ユーザーが {% data variables.product.prodname_ghe_cloud %} の Organization のいずれかのメンバーである
+- ユーザーが Organization のいずれかのプライベート リポジトリへの書き込みアクセス権を持っている
+- ユーザーが {% data variables.visual_studio.prodname_vs_subscriber %} である
+
+これらのロールの招待は、招待が承諾されるか期限切れになるまでライセンスを使用します。 ライセンスを使用している Enterprise 内の個人について詳しくは「[ユーザーごとの価格付けについて](/billing/managing-billing-for-your-github-account/about-per-user-pricing)」を参照してください。
 
 使用するデプロイの数に関係なく、各ユーザーが 1 つのシートを使用するには、{% data variables.product.prodname_ghe_server %} と {% data variables.product.prodname_ghe_cloud %} の間でライセンスの使用状況を同期する必要があります。 詳細については、「[{% data variables.product.prodname_ghe_server %} と {% data variables.product.prodname_ghe_cloud %} の間でユーザー ライセンスの使用状況を手動で同期する](/billing/managing-your-license-for-github-enterprise/syncing-license-usage-between-github-enterprise-server-and-github-enterprise-cloud)」を参照してください。
 
@@ -67,11 +74,11 @@ ms.locfileid: '147572663'
 | enterprise_server_primary_emails | 各ユーザーの GHES アカウントに関連付けられているプライマリ メール アドレス |
 | enterprise_server_user_ids | ユーザーの GHES アカウントごとの、アカウントのユーザー ID
 | total_user_accounts | 個人が GHEC と GHES の両方で持っているアカウントの合計数
-| visual_studio_subscription_user | ユーザーが {% data variables.product.prodname_vs_subscriber %} であるかどうか |
+| visual_studio_subscription_user | ユーザーが {% data variables.visual_studio.prodname_vs_subscriber %} であるかどうか |
 | visual_studio_subscription_email | ユーザーの VSS に関連付けられているメール アドレス |
 | visual_studio_license_status | Visual Studio ライセンスが {% data variables.product.company_short %} ユーザーに一致しているかどうか |
 
-エンタープライズ内の 1 つ以上の組織のメンバーになっていない {% data variables.product.prodname_vs_subscriber %} は、保留中の招待状態でレポートに含まれ、[Name]\(名前\) または [Profile link]\(プロファイル リンク\) フィールドの値は指定されません。
+エンタープライズ内の 1 つ以上の組織のメンバーになっていない {% data variables.visual_studio.prodname_vs_subscriber %} は、保留中の招待状態でレポートに含まれ、[名前] または [プロファイル リンク] フィールドの値がありません。
 
 ### {% data variables.product.prodname_ghe_server %} のエクスポートされたライセンス使用状況 (JSON ファイル)
 

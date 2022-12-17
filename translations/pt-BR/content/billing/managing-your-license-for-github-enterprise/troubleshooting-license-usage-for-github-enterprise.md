@@ -10,12 +10,12 @@ topics:
   - Enterprise
   - Licensing
 shortTitle: Troubleshoot license usage
-ms.openlocfilehash: f23ca2380e71f5b037278c71da57dc8fab94c750
-ms.sourcegitcommit: 47bd0e48c7dba1dde49baff60bc1eddc91ab10c5
+ms.openlocfilehash: 8595aaad929e534ebbd474270f3e01f87113b5ec
+ms.sourcegitcommit: aded2711e14a0c2473049d3d7e05c82a74e4c634
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2022
-ms.locfileid: '147572654'
+ms.lasthandoff: 11/21/2022
+ms.locfileid: '148179938'
 ---
 ## Sobre o uso inesperado de licenças
 
@@ -27,7 +27,14 @@ Por motivos de privacidade, os proprietários corporativos não podem acessar di
 
 ## Sobre o cálculo de licenças consumidas
 
-{% data variables.product.company_short %} fatura para cada pessoa que usa implementações do {% data variables.product.prodname_ghe_server %}, é membro de uma das suas organizações do {% data variables.product.prodname_ghe_cloud %} ou é um {% data variables.product.prodname_vs_subscriber %}. Para obter mais informações sobre as pessoas em sua empresa que consomem uma licença, confira "[Sobre preços por usuário](/billing/managing-billing-for-your-github-account/about-per-user-pricing)".
+Se um usuário atender a uma ou mais das condições a seguir, o {% data variables.product.company_short %} vai cobrar pelo usuário.
+
+- O usuário utiliza implantações de {% data variables.product.prodname_ghe_server %}.
+- O usuário é membro de uma das suas organizações na {% data variables.product.prodname_ghe_cloud %}.
+- O usuário tem acesso de gravação a um dos repositórios privados da sua organização.
+- O usuário é um {% data variables.visual_studio.prodname_vs_subscriber %}.
+
+Cada convite para essas funções consumirá uma licença até que seja aceito ou expire. Para obter mais informações sobre as pessoas em sua empresa que consomem uma licença, confira "[Sobre preços por usuário](/billing/managing-billing-for-your-github-account/about-per-user-pricing)".
 
 Para que cada usuário consuma apenas uma estação, independentemente de quantas implantações eles usam, você precisa sincronizar o uso de licenças entre {% data variables.product.prodname_ghe_server %} e {% data variables.product.prodname_ghe_cloud %}. Para obter mais informações, confira "[Sincronizando o uso de licenças entre o {% data variables.product.prodname_ghe_server %} e o {% data variables.product.prodname_ghe_cloud %}](/billing/managing-your-license-for-github-enterprise/syncing-license-usage-between-github-enterprise-server-and-github-enterprise-cloud)".
 
@@ -67,11 +74,11 @@ O relatório de uso de licença para sua empresa é um arquivo CSV que contém a
 | enterprise_server_primary_emails | Os endereços de email primários associados a cada uma das contas do GHES do usuário |
 | enterprise_server_user_ids | Para cada uma das contas do GHES do usuário, a ID de usuário da conta
 | total_user_accounts | O número total de contas que a pessoa tem em GHEC e GHES
-| visual_studio_subscription_user | Se o usuário é ou não um {% data variables.product.prodname_vs_subscriber %} |
+| visual_studio_subscription_user | Se o usuário é ou não um {% data variables.visual_studio.prodname_vs_subscriber %} |
 | visual_studio_subscription_email | O endereço de email associado ao VSS do usuário |
 | visual_studio_license_status | Se a licença do Visual Studio foi correspondida a um usuário do {% data variables.product.company_short %} |
 
-{% data variables.product.prodname_vs_subscriber %}s que ainda não são membros de pelo menos uma organização em sua empresa serão incluídos no relatório com um status de convite pendente e não terão valores para o campo "Nome" ou "Link do perfil".
+{% data variables.visual_studio.prodname_vs_subscriber %}s que ainda não são membros de pelo menos uma organização em sua empresa serão incluídos no relatório com um status de convite pendente e não terão valores para o campo "Nome" ou "Link do perfil".
 
 ### Uso de licença exportada do {% data variables.product.prodname_ghe_server %} (arquivo JSON)
 

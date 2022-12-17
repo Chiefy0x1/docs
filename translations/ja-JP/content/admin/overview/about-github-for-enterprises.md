@@ -1,6 +1,6 @@
 ---
 title: エンタープライズ向け GitHub について
-intro: '企業は、{% data variables.product.prodname_dotcom %} のエンタープライズ製品を使って、ソフトウェア開発のライフサイクル全体を改善できます。'
+intro: '企業は、{% data variables.product.prodname_dotcom %} のエンタープライズ製品を使って、ソフトウェア開発ライフサイクル全体を改善できます。'
 versions:
   ghec: '*'
   ghes: '*'
@@ -9,12 +9,12 @@ type: overview
 topics:
   - Enterprise
   - Fundamentals
-ms.openlocfilehash: 38e64d503ca576cf663b77698b05a23924eb271e
-ms.sourcegitcommit: 47bd0e48c7dba1dde49baff60bc1eddc91ab10c5
+ms.openlocfilehash: dbba8a55fd0ac20c97039de05aa629dea7048626
+ms.sourcegitcommit: 6185352bc563024d22dee0b257e2775cadd5b797
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2022
-ms.locfileid: '147390425'
+ms.lasthandoff: 12/09/2022
+ms.locfileid: '148192650'
 ---
 ## エンタープライズ向け {% data variables.product.prodname_dotcom %} について
 
@@ -22,9 +22,9 @@ ms.locfileid: '147390425'
 
 開発者は、issue やプロジェクトを使ってソース コードをリポジトリに格納し、バージョン管理して、作業を計画および追跡することができます。 クラウドでホストされる開発環境である {% data variables.product.prodname_github_codespaces %} でコードを作成し、コード セキュリティ機能を使って、コードベースからシークレットと脆弱性を排除しつつ、pull request で相互のコード変更を確認できます。 最後に、{% data variables.product.prodname_actions %} を使ってビルド、テスト、デプロイのパイプラインを自動化し、{% data variables.product.prodname_registry %} を使ってソフトウェア パッケージをホストできます。
 
-企業が {% data variables.product.prodname_enterprise %} を採用すると、投資収益率 (ROI) が高くなります。 たとえば、開発者は 1 日あたり 45 分間節約でき、オンボードとトレーニングの時間は 40% 短縮されます。 詳しくは、「[{% data variables.product.prodname_enterprise %} の経済効果の総計](https://resources.github.com/downloads/TEI-of-GitHub-Enterprise.pdf)」をご覧ください。
+企業が {% data variables.product.prodname_enterprise %} を採用すると、投資収益率 (ROI) が高くなります。 たとえば、開発者は 1 日あたり 45 分間節約でき、オンボードとトレーニングの時間は 40% 短縮されます。 詳しくは、「[{% data variables.product.prodname_enterprise %} の経済効果の総計](https://resources.github.com/forrester/)」をご覧ください。
 
-ソフトウェア開発ライフサイクルのすべての段階の管理を簡略化するために、Enterprise アカウントと呼ばれる単一の可視性と管理ポイントを提供しています。 Enterprise アカウントを使うと、課金と設定の管理、ポリシーの適用、エンタープライズのリソースへのアクセス権を持つユーザーの監査を行うことができます。 詳細については、「[Enterprise アカウントについて](/admin/overview/about-enterprise-accounts)」を参照してください。
+ソフトウェア開発ライフサイクルのすべての段階の管理を簡素化するため、Enterprise アカウントと呼ばれる可視性と管理の単一ポイントが提供されています。 Enterprise アカウントを使うと、課金と設定の管理、ポリシーの適用、エンタープライズのリソースへのアクセス権を持つユーザーの監査を行うことができます。 詳細については、「[Enterprise アカウントについて](/admin/overview/about-enterprise-accounts)」を参照してください。
 
 必要に応じて、{% data variables.product.prodname_GH_advanced_security %} を使って付加的なコード セキュリティ機能を追加したり、{% data variables.contact.premium_support %} を使ってサポート オプションを強化したりすることができます。 詳しくは、「[{% data variables.product.prodname_GH_advanced_security %} について](/get-started/learning-about-github/about-github-advanced-security)」、および「[{% data variables.contact.premium_support %}]({% ifversion ghae %}/enterprise-cloud@latest{% endif %}/support/learning-about-github-support/about-github-premium-support){% ifversion ghae %} について」({% data variables.product.prodname_ghe_cloud %} ドキュメント) {% else %}をご覧ください。{% endif %}
 

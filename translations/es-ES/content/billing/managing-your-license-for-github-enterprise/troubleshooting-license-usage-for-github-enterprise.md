@@ -10,12 +10,12 @@ topics:
   - Enterprise
   - Licensing
 shortTitle: Troubleshoot license usage
-ms.openlocfilehash: f23ca2380e71f5b037278c71da57dc8fab94c750
-ms.sourcegitcommit: 47bd0e48c7dba1dde49baff60bc1eddc91ab10c5
+ms.openlocfilehash: 8595aaad929e534ebbd474270f3e01f87113b5ec
+ms.sourcegitcommit: aded2711e14a0c2473049d3d7e05c82a74e4c634
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2022
-ms.locfileid: '147572668'
+ms.lasthandoff: 11/21/2022
+ms.locfileid: '148179945'
 ---
 ## Acerca del uso inesperado de licencias
 
@@ -27,7 +27,14 @@ Por motivos de privacidad, los propietarios de la empresa no pueden acceder dire
 
 ## Acerca del cálculo de licencias consumidas
 
-{% data variables.product.company_short %} factura por cada persona que usa implementaciones de {% data variables.product.prodname_ghe_server %}, que es miembro de una de las organizaciones de {% data variables.product.prodname_ghe_cloud %} o que es un {% data variables.product.prodname_vs_subscriber %}. Para obtener más información sobre las personas de la empresa que consumen una licencia, consulta «[Acerca de los precios por usuario](/billing/managing-billing-for-your-github-account/about-per-user-pricing)».
+Si un usuario cumple una o varias de las condiciones siguientes, {% data variables.product.company_short %} factura al usuario.
+
+- El usuario utiliza implementaciones de {% data variables.product.prodname_ghe_server %}.
+- El usuario es miembro de una de las organizaciones en {% data variables.product.prodname_ghe_cloud %}.
+- El usuario tiene acceso de escritura a uno de los repositorios privados de tu organización.
+- Si el usuario es un {% data variables.visual_studio.prodname_vs_subscriber %}.
+
+Las invitaciones para estos roles consumirán una licencia hasta que se acepte o expire la invitación. Para obtener más información sobre las personas de la empresa que consumen una licencia, consulta «[Acerca de los precios por usuario](/billing/managing-billing-for-your-github-account/about-per-user-pricing)».
 
 Para que cada usuario consuma un solo puesto, independientemente del número de implementaciones que use, debes sincronizar el uso de licencias entre {% data variables.product.prodname_ghe_server %} y {% data variables.product.prodname_ghe_cloud %}. Para obtener más información, consulte "[Sincronizar el uso de licencias de usuario manualmente entre {% data variables.product.prodname_ghe_server %} y {% data variables.product.prodname_ghe_cloud %}](/billing/managing-your-license-for-github-enterprise/syncing-license-usage-between-github-enterprise-server-and-github-enterprise-cloud)."
 
@@ -67,11 +74,11 @@ El informe de uso de licencias de la empresa es un archivo CSV que contiene la i
 | enterprise_server_primary_emails | Las direcciones de correo electrónico principales asociadas a cada una de las cuentas GHES del usuario |
 | enterprise_server_user_ids | Para cada una de las cuentas GHES del usuario, el Id. de usuario de la cuenta
 | total_user_accounts | El número total de cuentas que tiene la persona en GHEC y GHES
-| visual_studio_subscription_user | Si el usuario es un {% data variables.product.prodname_vs_subscriber %} o no |
+| visual_studio_subscription_user | Si el usuario es un {% data variables.visual_studio.prodname_vs_subscriber %} o no. |
 | visual_studio_subscription_email | Dirección de correo electrónico asociada a la VSS del usuario |
 | visual_studio_license_status | Si la licencia de Visual Studio se ha emparejado con un usuario {% data variables.product.company_short %} o no |
 
-Si un {% data variables.product.prodname_vs_subscriber %} aún no es miembro de al menos una organización de la empresa, se incluirá en el informe con el estado de invitación pendiente y no aparecerá ningún valor en el campo "Nombre" o "Vínculo del perfil".
+Si un {% data variables.visual_studio.prodname_vs_subscriber %} aún no es miembro de al menos una organización de la empresa, se incluirá en el informe con el estado de invitación pendiente y no aparecerá ningún valor en el campo "Nombre" o "Vínculo del perfil".
 
 ### Uso de licencias exportado de {% data variables.product.prodname_ghe_server %} (archivo JSON)
 

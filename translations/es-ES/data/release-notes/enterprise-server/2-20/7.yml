@@ -1,4 +1,4 @@
-date: '2020-05-05'
+date: '05-05-2020'
 sections:
   security_fixes:
     - 'Los paquetes se han actualizado a sus últimas versiones de seguridad. {% comment %} https://github.com/github/enterprise2/pull/20027, https://github.com/github/enterprise2/pull/19997 {% endcomment %}'
@@ -10,10 +10,10 @@ sections:
     - 'La recolección de elementos no utilizados de archivos temporales podía generar un error de validación de licencia. {% comment %} https://github.com/github/github/pull/142209, https://github.com/github/github/pull/142189 {% endcomment %}'
     - 'En algunas situaciones, por ejemplo, cuando un repositorio se creaba por primera vez, el gancho de pre-recepción se ejecutaba sin un valor rellenado para la variable de entorno GITHUB_REPO_PUBLIC. {% comment %} https://github.com/github/github/pull/139419, https://github.com/github/github/pull/136228, https://github.com/github/github/pull/134363 {% endcomment %}'
   known_issues:
-    - "En una instancia de GitHub\_Enterprise Server recién configurada sin ningún usuario, un atacante podría crear el primer usuario administrador. {% comment %} https://github.com/github/enterprise2/issues/1889 {% endcomment %}"
+    - 'En una instancia de GitHub Enterprise Server recién configurada sin ningún usuario, un atacante podría crear el primer usuario administrador. {% comment %} https://github.com/github/enterprise2/issues/1889 {% endcomment %}'
     - 'Las reglas de cortafuegos personalizadas no se mantienen durante una actualización. {% comment %} https://github.com/github/enterprise2/issues/2823 {% endcomment %}'
     - 'Los archivos supervisados de Git LFS [cargados desde la interfaz web](https://github.com/blog/2105-upload-files-to-your-repositories) se agregan de forma incorrecta y directa al repositorio. {% comment %} https://github.com/github/github/issues/54684 {% endcomment %}'
-    - "Las incidencias no se pueden cerrar si contienen un enlace permanente a un blob del mismo repositorio en el que la ruta es mayor de 255\_caracteres. {% comment %} https://github.com/github/github/issues/107731 {% endcomment %}"
+    - 'Las incidencias no se pueden cerrar si contienen un enlace permanente a un blob del mismo repositorio en el que la ruta es mayor de 255 caracteres. {% comment %} https://github.com/github/github/issues/107731 {% endcomment %}'
     - 'Al enviar cambios a un gist, se podría desencadenar una excepción durante el enlace posterior a la recepción. {% comment %} https://github.com/github/github/issues/129091 {% endcomment %}'
     - 'Cuando se habilita "Los usuarios pueden buscar en GitHub.com" con GitHub Connect, las incidencias en los repositorios privados e internos no se incluyen en los resultados de la búsqueda de GitHub.com. {% comment %} https://github.com/github/admin-experience/issues/571 {% endcomment %}'
     - 'Las alertas de seguridad no se notifican cuando se envían cambios a un repositorio en la línea de comandos. (Actualizado el 23-06-2020) {% comment %} https://github.com/github/github/issues/143190 {% endcomment %}'

@@ -1,4 +1,4 @@
-date: '2020-10-09'
+date: '09-10-2020'
 sections:
   security_fixes:
     - 'Un usuario cuyo nombre de usuario del directorio de **LDAP** se estandarizaba a una información de inicio de sesión de cuenta de GHES podía autenticarse en la cuenta existente. {% comment %} https://github.com/github/github/pull/156517, https://github.com/github/github/pull/155512 {% endcomment %}'
@@ -19,10 +19,10 @@ sections:
     - 'Se ha eliminado el requisito de las huellas dactilares de SSH en los archivos de `ghe-migrator`, ya que siempre se puede calcular. {% comment %} https://github.com/github/github/pull/156945, https://github.com/github/github/pull/155387 {% endcomment %}'
     - 'Los manifiestos de las GitHub Apps ahora incluyen el campo `request_oauth_on_install`. {% comment %} https://github.com/github/github/pull/156994, https://github.com/github/github/pull/155010, https://github.com/github/ecosystem-apps/issues/1055 {% endcomment %}'
   known_issues:
-    - "En una instancia de GitHub\_Enterprise Server recién configurada sin ningún usuario, un atacante podría crear el primer usuario administrador. {% comment %} https://github.com/github/enterprise2/issues/1889 {% endcomment %}"
+    - 'En una instancia de GitHub Enterprise Server recién configurada sin ningún usuario, un atacante podría crear el primer usuario administrador. {% comment %} https://github.com/github/enterprise2/issues/1889 {% endcomment %}'
     - 'Las reglas de cortafuegos personalizadas no se mantienen durante una actualización. {% comment %} https://github.com/github/enterprise2/issues/2823 {% endcomment %}'
     - 'Los archivos supervisados de Git LFS [cargados desde la interfaz web](https://github.com/blog/2105-upload-files-to-your-repositories) se agregan de forma incorrecta y directa al repositorio. {% comment %} https://github.com/github/github/issues/54684 {% endcomment %}'
-    - "Las incidencias no se pueden cerrar si contienen un enlace permanente a un blob del mismo repositorio en el que la ruta es mayor de 255\_caracteres. {% comment %} https://github.com/github/github/issues/107731 {% endcomment %}"
+    - 'Las incidencias no se pueden cerrar si contienen un enlace permanente a un blob del mismo repositorio en el que la ruta es mayor de 255 caracteres. {% comment %} https://github.com/github/github/issues/107731 {% endcomment %}'
     - 'Cuando se habilita "Los usuarios pueden buscar en GitHub.com" con GitHub Connect, las incidencias en los repositorios privados e internos no se incluyen en los resultados de la búsqueda de GitHub.com. {% comment %} https://github.com/github/admin-experience/issues/571 {% endcomment %}'
     - 'Las alertas de seguridad no se notifican cuando se realiza la inserción en un repositorio en la línea de comandos. {% comment %} https://github.com/github/github/issues/143190 {% endcomment %}'
     - 'Los registros de auditoría se pueden atribuir a 127.0.0.1 en lugar de a la dirección IP de origen real. (Actualizado el 02-11-2020) {% comment %} https://github.com/github/enterprise2/issues/21514 {% endcomment %}'

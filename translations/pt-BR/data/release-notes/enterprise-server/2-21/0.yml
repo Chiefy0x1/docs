@@ -1,4 +1,4 @@
-date: '2020-06-09'
+date: '09-06-2020'
 sections:
   features:
     - 'Os usuários podem [gerenciar notificações](https://help.github.com/en/enterprise/2.21/user/github/managing-subscriptions-and-notifications-on-github/about-notifications) sobre problemas, solicitações de pull e outros assuntos ao navegar a partir de uma notificação na web. {% comment %} https://github.com/github/enterprise-releases/issues/2135#issuecomment-633905096 {% endcomment %}'
@@ -13,13 +13,13 @@ sections:
   security_fixes:
     - 'Foi identificada uma vulnerabilidade de controle de acesso impróprio na API do GitHub Enterprise Server que permitia que um membro da organização escalonasse permissões e obtivesse acesso a repositórios não autorizados dentro de uma organização. Essa vulnerabilidade afetou todas as versões do GitHub Enterprise Server anteriores à 2.21. Emitimos [CVE-2020-10516](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-10516) em resposta a esse problema. A vulnerabilidade foi relatada pelo [Programa de recompensas por bugs do GitHub](https://bounty.github.com). {% comment %} https://developer.github.com/changes/2020-02-26-new-delete-reactions-endpoints/ {% endcomment %}'
   bugs:
-    - 'Se um usuário com acesso push minimizou o comentário de outro usuário, o autor do comentário poderia desfazer a minimização, mesmo se não tivesse privilégios suficientes. {% comment %} https://github.com/github/github/pull/141237 {% endcomment %}'
+    - "Se um usuário com acesso push minimizou o comentário de outro usuário, o autor do comentário poderia desfazer a minimização, mesmo se não tivesse privilégios suficientes. {% comment %} https://github.com/github/github/pull/141237 {% endcomment %}"
     - 'Os usuários poderiam acidentalmente mesclar no mestre a partir do editor de modelos de problemas e blob. {% comment %} https://github.com/github/github/pull/134483, https://github.com/github/github/pull/134323 {% endcomment %}'
     - 'Quando um usuário excluiu uma conta do GitHub, os registros do log de auditoria não mostraram corretamente os registros de remoção da organização. {% comment %} https://github.com/github/github/pull/140940 {% endcomment %}'
     - 'O avatar do gist para o usuário atual faria um link para uma URL inexistente. {% comment %} https://github.com/github/github/pull/140925 {% endcomment %}'
     - 'A contagem da guia de repositórios da organização não incluiu repositórios internos. {% comment %} https://github.com/github/github/pull/136323 {% endcomment %}'
     - 'Ao transferir um repositório, clicar no botão "Mostrar Todas as Equipes" gerou um erro 500. {% comment %} https://github.com/github/github/pull/134455 {% endcomment %}'
-    - 'Os nomes de arquivos longos poderiam gerar problemas de estouro ao mostrar o rótulo "Alterado desde a última exibição" ou o botão de alternância diff "Mostrar avançado" na exibição de arquivos diferencial. {% comment %} https://github.com/github/github/pull/134453 {% endcomment %}'
+    - "Os nomes de arquivos longos poderiam gerar problemas de estouro ao mostrar o rótulo \"Alterado desde a última exibição\" ou o botão de alternância diff \"Mostrar avançado\" na exibição de arquivos diferencial. {% comment %} https://github.com/github/github/pull/134453 {% endcomment %}"
     - 'Os cartões hovercard para equipes da organização reportaram incorretamente o tamanho do membro. {% comment %} https://github.com/github/github/pull/133879 {% endcomment %}'
     - 'A janela pop-up de comentário de revisão da solicitação de pull teve um problema de rolamento. {% comment %} https://github.com/github/github/pull/141157 {% endcomment %}'
     - 'Haproxy poderia saturar, gerando lentidão nas operações do git. {% comment %} https://github.com/github/enterprise2/issues/19322 {% endcomment %}'
@@ -69,5 +69,5 @@ sections:
     - 'Quando a opção "Usuários podem pesquisar no GitHub.com" está habilitada com o GitHub Connect, problemas nos repositórios privados e internos não estão incluídos nos resultados de pesquisa do GitHub.com. {% comment %} https://github.com/github/admin-experience/issues/571 {% endcomment %}'
     - 'Os alertas de segurança não são relatados ao efetuar push em um repositório na linha de comando. (atualizado em 23-06-2020) {% comment %} https://github.com/github/github/issues/143190 {% endcomment %}'
     - 'Os logs de auditoria podem ser atribuídos a 127.0.0.1, em vez do endereço IP de origem real. (atualizado em 02-11-2020) {% comment %} https://github.com/github/enterprise2/issues/21514 {% endcomment %}'
-    - 'Ocorre uma falha na configuração da permissão de um repositório para `Triagem` ou `Manter` com uma mensagem de erro.'
+    - "Ocorre uma falha na configuração da permissão de um repositório para `Triagem` ou `Manter` com uma mensagem de erro."
     - 'Quando um nó de réplica está offline em uma configuração de alta disponibilidade, {% data variables.product.product_name %} ainda pode encaminhar solicitações de {% data variables.product.prodname_pages %} para o nó offline, reduzindo a disponibilidade de {% data variables.product.prodname_pages %} para os usuários.'

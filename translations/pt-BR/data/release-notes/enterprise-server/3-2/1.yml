@@ -1,4 +1,4 @@
-date: '2021-10-12'
+date: '12-10-2021'
 sections:
   security_fixes:
     - 'Os pacotes foram atualizados para as versões de segurança mais recentes. {% comment %} https://github.com/github/enterprise2/pull/27118, https://github.com/github/enterprise2/pull/27110 {% endcomment %}'
@@ -18,11 +18,11 @@ sections:
   changes:
     - 'Agora os aplicativos GitHub definem o recurso de Digitalização de Segredo em um repositório de forma consistente com a API. {% comment %} https://github.com/github/github/pull/193456, https://github.com/github/github/pull/193125 {% endcomment %}'
   known_issues:
-    - 'Em uma nova configuração de {% data variables.product.prodname_ghe_server %} sem qualquer usuário, um invasor pode criar o primeiro usuário administrador.'
-    - 'As regras de firewall personalizadas são removidas durante o processo de atualização.'
-    - 'Arquivos LFS do Git [enviados através da interface Web](https://github.com/blog/2105-upload-files-to-your-repositories) são adicionados diretamente ao repositório e de maneira incorreta.'
-    - 'Os problemas não podem ser fechados se contiverem um permalink para um blob no mesmo repositório, em que o caminho do arquivo de blob é maior que 255 caracteres.'
-    - 'Quando a opção "Usuários podem pesquisar pelo GitHub.com" está habilitada com o GitHub Connect, os problemas em repositórios privados e internos não são incluídos nos resultados de pesquisa do GitHub.com.'
-    - 'O registro npm {% data variables.product.prodname_registry %} não retorna mais um valor temporal em respostas de metadados. Isso foi feito para permitir melhorias substanciais de desempenho. Continuamos a ter todos os dados necessários para retornar um valor temporal como parte da resposta de metadados e continuaremos a retornar este valor no futuro quando tivermos resolvido os problemas de desempenho existentes.'
-    - 'Os limites de recursos que são específicos para processamento de ganchos de pré-recebimento podem causar falha em alguns ganchos de pré-recebimento.'
+    - "Em uma nova configuração de {% data variables.product.prodname_ghe_server %} sem qualquer usuário, um invasor pode criar o primeiro usuário administrador."
+    - As regras de firewall personalizadas são removidas durante o processo de atualização.
+    - "Arquivos LFS do Git [enviados através da interface Web](https://github.com/blog/2105-upload-files-to-your-repositories) são adicionados diretamente ao repositório e de maneira incorreta."
+    - "Os problemas não podem ser fechados se contiverem um permalink para um blob no mesmo repositório, em que o caminho do arquivo de blob é maior que 255 caracteres."
+    - "Quando a opção \"Usuários podem pesquisar pelo GitHub.com\" está habilitada com o GitHub Connect, os problemas em repositórios privados e internos não são incluídos nos resultados de pesquisa do GitHub.com."
+    - "O registro npm {% data variables.product.prodname_registry %} não retorna mais um valor temporal em respostas de metadados. Isso foi feito para permitir melhorias substanciais de desempenho. Continuamos a ter todos os dados necessários para retornar um valor temporal como parte da resposta de metadados e continuaremos a retornar este valor no futuro quando tivermos resolvido os problemas de desempenho existentes."
+    - Os limites de recursos que são específicos para processamento de ganchos de pré-recebimento podem causar falha em alguns ganchos de pré-recebimento.
     - '{% data reusables.release-notes.ghas-3.4-secret-scanning-known-issue %}'

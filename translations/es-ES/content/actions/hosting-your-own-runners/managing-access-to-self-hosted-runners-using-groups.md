@@ -1,23 +1,27 @@
 ---
 title: Administración del acceso a los ejecutores autohospedados mediante grupos
+shortTitle: Manage access with runner groups
 intro: Puedes utilizar políticas para limitar el acceso a los ejecutores auto-hospedados que se hayan agregado a una organización o empresa.
 redirect_from:
   - /actions/hosting-your-own-runners/managing-access-to-self-hosted-runners
+miniTocMaxHeadingLevel: 3
 versions:
   fpt: '*'
   ghes: '*'
   ghae: '*'
   ghec: '*'
 type: tutorial
-shortTitle: Using runner groups
-ms.openlocfilehash: 8e4c5669c1579fa635534b2f4466c7645033fc0c
-ms.sourcegitcommit: 478f2931167988096ae6478a257f492ecaa11794
+ms.openlocfilehash: c6f53c3698800de519fe34231a8faf37924eacaa
+ms.sourcegitcommit: d0cea547f6a5d991a28c310257cafd616235889f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2022
-ms.locfileid: '147763592'
+ms.lasthandoff: 11/01/2022
+ms.locfileid: '148120893'
 ---
 {% data reusables.actions.enterprise-beta %} {% data reusables.actions.enterprise-github-hosted-runners %}
+
+{% ifversion target-runner-groups %} Para obtener información sobre cómo enrutar trabajos a los ejecutores de un grupo específico, consulta "[Elección de ejecutores en un grupo](/actions/using-jobs/choosing-the-runner-for-a-job#choosing-runners-in-a-group)".
+{% endif %}
 
 ## Acerca de grupos de ejecutores
 
@@ -75,3 +79,5 @@ ms.locfileid: '147763592'
 {% data reusables.actions.removing-a-runner-group %}
 
 {% endif %}
+
+{% data reusables.actions.section-using-unique-names-for-runner-groups %}

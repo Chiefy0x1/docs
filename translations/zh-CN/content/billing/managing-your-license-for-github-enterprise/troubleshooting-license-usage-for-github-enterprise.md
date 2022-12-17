@@ -10,12 +10,12 @@ topics:
   - Enterprise
   - Licensing
 shortTitle: Troubleshoot license usage
-ms.openlocfilehash: f23ca2380e71f5b037278c71da57dc8fab94c750
-ms.sourcegitcommit: 47bd0e48c7dba1dde49baff60bc1eddc91ab10c5
+ms.openlocfilehash: 8595aaad929e534ebbd474270f3e01f87113b5ec
+ms.sourcegitcommit: aded2711e14a0c2473049d3d7e05c82a74e4c634
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2022
-ms.locfileid: '147572657'
+ms.lasthandoff: 11/21/2022
+ms.locfileid: '148179939'
 ---
 ## 关于意外的许可证使用情况
 
@@ -27,7 +27,14 @@ ms.locfileid: '147572657'
 
 ## 关于已使用的许可证的计算
 
-{% data variables.product.company_short %} 会对以下每个人员计费：使用 {% data variables.product.prodname_ghe_server %} 的部署；为 {% data variables.product.prodname_ghe_cloud %} 上的其中一个组织的成员；为 {% data variables.product.prodname_vs_subscriber %}。 有关企业中使用许可证的人员的详细信息，请参阅“[关于每用户定价](/billing/managing-billing-for-your-github-account/about-per-user-pricing)”。
+如果用户满足以下一个或多个条件，{% data variables.product.company_short %} 会为该用户计费。
+
+- 该用户利用 {% data variables.product.prodname_ghe_server %} 的部署。
+- 该用户是 {% data variables.product.prodname_ghe_cloud %} 上你的组织之一的成员。
+- 该用户对你组织的某个专用存储库具有写入访问权限。
+- 该用户是 {% data variables.visual_studio.prodname_vs_subscriber %}。
+
+这些角色的邀请将使用许可证，直到邀请被接受或过期。 有关企业中使用许可证的人员的详细信息，请参阅“[关于每用户定价](/billing/managing-billing-for-your-github-account/about-per-user-pricing)”。
 
 对于使用单个席位而不管使用多少部署的每个用户，你必须在 {% data variables.product.prodname_ghe_server %} 和 {% data variables.product.prodname_ghe_cloud %} 之间同步许可证使用情况。 有关详细信息，请参阅“[同步 {% data variables.product.prodname_ghe_server %} 和 {% data variables.product.prodname_ghe_cloud %} 之间的许可证使用情况](/billing/managing-your-license-for-github-enterprise/syncing-license-usage-between-github-enterprise-server-and-github-enterprise-cloud)”。
 
@@ -67,11 +74,11 @@ ms.locfileid: '147572657'
 | enterprise_server_primary_emails | 与用户的每个 GHES 帐户关联的主电子邮件地址 |
 | enterprise_server_user_ids | 对于用户的每个 GHES 帐户，帐户的用户 ID
 | total_user_accounts | 此人在 GHEC 和 GHES 上拥有的帐户总数
-| visual_studio_subscription_user | 用户是否为 {% data variables.product.prodname_vs_subscriber %} |
+| visual_studio_subscription_user | 用户是否为 {% data variables.visual_studio.prodname_vs_subscriber %} |
 | visual_studio_subscription_email | 与用户的 VSS 关联的电子邮件地址 |
 | visual_studio_license_status | Visual Studio 许可证是否已与 {% data variables.product.company_short %} 用户匹配 |
 
-尚未成为企业中至少一个组织的成员的 {% data variables.product.prodname_vs_subscriber %}将包含在此报告中，为待定邀请状态，并且将缺少“名称”或“个人资料链接”字段的值。
+尚未成为企业中至少一个组织的成员的 {% data variables.visual_studio.prodname_vs_subscriber %} 将包含在此报告中，为待定邀请状态，并将缺少“名称”或“配置文件链接”字段的值。
 
 ### {% data variables.product.prodname_ghe_server %} 导出的许可证使用情况（JSON 文件）
 

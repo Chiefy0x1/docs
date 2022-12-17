@@ -1,22 +1,22 @@
 date: '2022-04-20'
 sections:
   security_fixes:
-    - Packages have been updated to the latest security versions. 
+    - Os pacotes foram atualizados para as últimas versões de segurança. 
   bugs:
-    - Upgrading the nodes in a high availability pair with an upgrade package could cause Elasticsearch to enter an inconsistent state in some cases. 
-    - In some cluster topologies, the command line utilities `ghe-spokesctl` and `ghe-btop` failed to run.
-    - Elasticsearch indices could be duplicated during a package upgrade, due to an `elasticsearch-upgrade` service running multiple times in parallel. 
-    - The `maint_host_low` job queues were not processed, resulting in some maintenance tasks failing to run.
-    - When converting a user account to an organization, if the user account was an owner of the {% data variables.product.prodname_ghe_server %} enterprise account, the converted organization would incorrectly appear in the enterprise owner list. 
-    - Creating an impersonation OAuth token using the Enterprise Administration REST API resulted in an error when an integration matching the OAuth Application ID already existed. 
+    - Atualizar os nós em um par de alta disponibilidade com um pacote de atualização poderia fazer com que Elasticsearch entre em um estado inconsistente em alguns casos. 
+    - "Em algumas topologias de grupo, os utilitários de linha de comando `ghe-spokesctl` e `ghe-btop` falharam em serem executados."
+    - Os índices de Elasticsearch podem ser duplicados durante a atualização de um pacote devido à um serviço `elasticsearch-upgrade` executando diversas vezes paralelamente. 
+    - "As filas de trabalhos `maint_host_low` não foram processadas, resultado na falha da execução de algumas tarefas de manutenção."
+    - "Ao fazer a conversão de uma conta de usuário para uma organização, se a conta de usuário fosse um proprietário da conta da empresa {% data variables.product.prodname_ghe_server %}, a organização convertida apareceria incorretamente na lista de proprietário da empresa." 
+    - Criar um token OAuth de representação usando a API REST da Enterprise Administration resultou em um erro quando já existiu uma integração correspondendo a ID do OAuth Application. 
   changes:
-    - When attempting to cache a value larger than the maximum allowed in Memcached, an error was raised however the key was not reported. 
+    - "Ao tentar armazenar em cache um valor maior do que o máximo permitido em Memcached, foi gerado um erro, mas a chave não foi relatada." 
   known_issues:
-    - The {% data variables.product.prodname_registry %} npm registry no longer returns a time value in metadata responses. This was done to allow for substantial performance improvements. We continue to have all the data necessary to return a time value as part of the metadata response and will resume returning this value in the future once we have solved the existing performance issues.
-    - On a freshly set up {% data variables.product.prodname_ghe_server %} instance without any users, an attacker could create the first admin user.
-    - Custom firewall rules are removed during the upgrade process.
-    - Git LFS tracked files [uploaded through the web interface](https://github.com/blog/2105-upload-files-to-your-repositories) are incorrectly added directly to the repository.
-    - Issues cannot be closed if they contain a permalink to a blob in the same repository, where the blob's file path is longer than 255 characters.
-    - When "Users can search GitHub.com" is enabled with {% data variables.product.prodname_github_connect %}, issues in private and internal repositories are not included in {% data variables.product.prodname_dotcom_the_website %} search results.
-    - If {% data variables.product.prodname_actions %} is enabled for {% data variables.product.prodname_ghe_server %}, teardown of a replica node with `ghe-repl-teardown` will succeed, but may return `ERROR:Running migrations`.
-    - Resource limits that are specific to processing pre-receive hooks may cause some pre-receive hooks to fail.
+    - "O registro npm {% data variables.product.prodname_registry %} não retorna mais um valor temporal em respostas de metadados. Isso foi feito para permitir melhorias substanciais de desempenho. Continuamos a ter todos os dados necessários para retornar um valor temporal como parte da resposta de metadados e continuaremos a retornar este valor no futuro quando tivermos resolvido os problemas de desempenho existentes."
+    - "Em uma instância de {% data variables.product.prodname_ghe_server %} recém-configurada sem usuários, um invasor pode criar o primeiro usuário administrador."
+    - As regras de firewall personalizadas são removidas durante o processo de atualização.
+    - "Arquivos LFS do Git [enviados através da interface Web](https://github.com/blog/2105-upload-files-to-your-repositories) são adicionados diretamente ao repositório e de maneira incorreta."
+    - "Os problemas não podem ser fechados se contiverem um permalink para um blob no mesmo repositório, em que o caminho do arquivo blob's é maior que 255 caracteres."
+    - "Quando \"Usuários podem pesquisar GitHub.com\" está habilitado com {% data variables.product.prodname_github_connect %}, os problemas em repositórios privados e internos não estão incluídos nos resultados de pesquisa de {% data variables.product.prodname_dotcom_the_Website %}."
+    - "Se o {% data variables.product.prodname_actions %} estiver habilitado para {% data variables.product.prodname_ghe_server %}, a desmontagem de um nó de réplica com `ghe-repl-teardown` será bem-sucedida, mas poderá retornar `ERROR:Running migrations`."
+    - Os limites de recursos que são específicos para processamento de hooks pre-receive podem causar falha em alguns hooks pre-receive.

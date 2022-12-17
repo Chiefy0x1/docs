@@ -14,9 +14,18 @@ redirect_from:
   - /admin/github-actions/enabling-github-actions-with-amazon-s3-storage
 shortTitle: Amazon S3 storage
 ---
+
+{% data reusables.actions.enterprise-storage-about %}
+
 ## Prerequisites
 
-{% data reusables.actions.enterprise-s3-support-warning %}
+{% note %}
+
+**Note:** The only {% data variables.product.prodname_dotcom %}-supported S3 storage providers are Amazon S3 and MinIO Gateway for NAS.
+
+{% data reusables.actions.enterprise-s3-tech-partners %}
+
+{% endnote %}
 
 Before enabling {% data variables.product.prodname_actions %}, make sure you have completed the following steps:
 

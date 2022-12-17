@@ -1,23 +1,27 @@
 ---
 title: グループを使用してセルフホストランナーへのアクセスを管理する
+shortTitle: Manage access with runner groups
 intro: ポリシーを使用して、Organization または Enterprise に追加されたセルフホストランナーへのアクセスを制限できます。
 redirect_from:
   - /actions/hosting-your-own-runners/managing-access-to-self-hosted-runners
+miniTocMaxHeadingLevel: 3
 versions:
   fpt: '*'
   ghes: '*'
   ghae: '*'
   ghec: '*'
 type: tutorial
-shortTitle: Using runner groups
-ms.openlocfilehash: 8e4c5669c1579fa635534b2f4466c7645033fc0c
-ms.sourcegitcommit: 478f2931167988096ae6478a257f492ecaa11794
+ms.openlocfilehash: c6f53c3698800de519fe34231a8faf37924eacaa
+ms.sourcegitcommit: d0cea547f6a5d991a28c310257cafd616235889f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2022
-ms.locfileid: '147763588'
+ms.lasthandoff: 11/01/2022
+ms.locfileid: '148120890'
 ---
 {% data reusables.actions.enterprise-beta %} {% data reusables.actions.enterprise-github-hosted-runners %}
+
+{% ifversion target-runner-groups %} 特定のグループのランナーにジョブをルーティングする方法についての情報は、「[グループ内のランナーを選ぶ](/actions/using-jobs/choosing-the-runner-for-a-job#choosing-runners-in-a-group)」を参照してください。
+{% endif %}
 
 ## ランナー グループについて
 
@@ -75,3 +79,5 @@ ms.locfileid: '147763588'
 {% data reusables.actions.removing-a-runner-group %}
 
 {% endif %}
+
+{% data reusables.actions.section-using-unique-names-for-runner-groups %}

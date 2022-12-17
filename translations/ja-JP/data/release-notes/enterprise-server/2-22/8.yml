@@ -1,37 +1,58 @@
 date: '2021-03-16'
 sections:
   security_fixes:
-    - Packages have been updated to the latest security versions.
+    - パッケージは最新のセキュリティ バージョンに更新されました。
   bugs:
-    - Systemd journal logs were duplicated in multiple places.
-    - A site admin could get a 500 error page while trying to view issues referenced from private repositories.
-    - Importing of repository archives from GitHub Enterprise Server that are missing repository files would fail with an error.
+    - Systemd ジャーナル ログが複数の場所に複製されました。
+    - サイト管理者がプライベート リポジトリから参照されている issue を見ようとすると、500 エラー ページが返されることがありました。
+    - GitHub Enterprise Server から、リポジトリのファイルがないリポジトリ アーカイブをインポートすると、エラーで失敗します。
   known_issues:
-    - On a freshly set up GitHub Enterprise Server without any users, an attacker could create the first admin user.
-    - Custom firewall rules are not maintained during an upgrade.
-    - Git LFS tracked files [uploaded through the web interface](https://github.com/blog/2105-upload-files-to-your-repositories) are incorrectly added directly to the repository.
-    - Issues cannot be closed if they contain a permalink to a blob in the same repository where the file path is longer than 255 characters.
-    - When "Users can search GitHub.com" is enabled with GitHub Connect, issues in private and internal repositories are not included in GitHub.com search results.
-    - |
-      Users may experience assets such as avatars not loading, or a failure to push/pull code. This may be caused by a PID mismatch in the `haproxy-cluster-proxy` service. To determine if you have an affected instance:
+    - 新しくセットアップされたユーザーのいない GitHub Enterprise Server で、攻撃者が最初の管理者ユーザーを作成できました。
+    - カスタム ファイアウォール規則は、アップグレード中維持されません。
+    - "[Web インターフェイスからアップロードされた](https://github.com/blog/2105-upload-files-to-your-repositories) Git LFS 追跡ファイルが誤ってリポジトリに直接追加されます。"
+    - 同じリポジトリ内の BLOB への固定リンクが含まれ、そのファイル パスが 255 文字を超える場合、issue をクローズできません。
+    - "GitHub Connect で [ユーザーが GitHub.com を検索できる] が有効になっている場合、プライベートと内部リポジトリの issue は GitHub.com の検索結果に含まれません。"
+    - |アバターなどのアセットが読み込まれない、またはコードのプッシュやプルに失敗するなどのエラーが発生する場合があります。これは、"haproxy-cluster-proxy" サービスでの PID の不一致が原因で発生する可能性があります。影響を受けたインスタンスがあるかどうかを確認するには、次の手順を行います。
 
-      **Single instance**
 
-      1. Run this in the [administrative shell](https://docs.github.com/en/enterprise-server/admin/configuration/accessing-the-administrative-shell-ssh) (SSH):
 
-        ```
-        if [ $(cat /var/run/haproxy-cluster-proxy.pid) -ne $(systemctl show --property MainPID --value haproxy-cluster-proxy) ]; then echo 'Main PID of haproxy-cluster-proxy does not match /var/run/haproxy-cluster-proxy.pid'; fi
-        ```
+**単一インスタンス**
 
-      2. If it shows that there is a mismatch, reboot the instance.
 
-      **Cluster or High Availability configuration**
 
-      1. Run this in the [administrative shell](https://docs.github.com/en/enterprise-server/admin/configuration/accessing-the-administrative-shell-ssh) (SSH):
+1.管理シェル (https://docs.github.com/en/enterprise-server/admin/configuration/accessing-the-administrative-shell-ssh) (SSH) で次を実行します。
 
-        ```
-        ghe-cluster-each -- 'if [ $(cat /var/run/haproxy-cluster-proxy.pid) -ne $(systemctl show --property MainPID --value haproxy-cluster-proxy) ]; then echo 'Main PID of haproxy-cluster-proxy does not match /var/run/haproxy-cluster-proxy.pid'; fi'
-        ```
 
-      2. If it shows one or more nodes are affected, reboot the affected nodes.
-    - When a replica node is offline in a high availability configuration, {% data variables.product.product_name %} may still route {% data variables.product.prodname_pages %} requests to the offline node, reducing the availability of {% data variables.product.prodname_pages %} for users.
+
+  ```
+
+  if [ $(cat /var/run/haproxy-cluster-proxy.pid) -ne $(systemctl show --property MainPID --value haproxy-cluster-proxy) ]; then echo ''Main PID of haproxy-cluster-proxy does not match /var/run/haproxy-cluster-proxy.pid''; fi
+
+  ```
+
+
+
+2.不一致があることが示された場合、インスタンスを再起動します。
+
+
+
+**クラスターまたは高可用性構成**
+
+
+
+1. 管理シェル (https://docs.github.com/en/enterprise-server/admin/configuration/accessing-the-administrative-shell-ssh) (SSH) で次を実行します。
+
+
+
+  ```
+
+  ghe-cluster-each -- ''if [ $(cat /var/run/haproxy-cluster-proxy.pid) -ne $(systemctl show --property MainPID --value haproxy-cluster-proxy) ]; then echo ''Main PID of haproxy-cluster-proxy does not match /var/run/haproxy-cluster-proxy.pid''; fi''
+
+  ```
+
+
+
+2.1 つ以上のノードが影響を受けたことが示された場合、影響を受けたノードを再起動します。
+
+|
+    - "高可用性構成でレプリカ ノードがオフラインの場合、{% data variables.product.product_name %} によって、{% data variables.product.prodname_pages %} 要求が引き続きオフライン ノードにルーティングされる可能性があり、ユーザーに対して {% data variables.product.prodname_pages %} の可用性が下がります。"

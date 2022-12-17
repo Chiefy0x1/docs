@@ -1,6 +1,6 @@
 ---
 title: Sobre o GitHub para empresas
-intro: 'As empresas podem usar os produtos corporativos do {% data variables.product.prodname_dotcom %} para melhorar todo o ciclo de vida de desenvolvimento de software.'
+intro: 'As empresas podem usar os produtos corporativos do {% data variables.product.prodname_dotcom %} para aprimorar todo o ciclo de vida de desenvolvimento de software.'
 versions:
   ghec: '*'
   ghes: '*'
@@ -9,12 +9,12 @@ type: overview
 topics:
   - Enterprise
   - Fundamentals
-ms.openlocfilehash: 38e64d503ca576cf663b77698b05a23924eb271e
-ms.sourcegitcommit: 47bd0e48c7dba1dde49baff60bc1eddc91ab10c5
+ms.openlocfilehash: dbba8a55fd0ac20c97039de05aa629dea7048626
+ms.sourcegitcommit: 6185352bc563024d22dee0b257e2775cadd5b797
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2022
-ms.locfileid: '147390411'
+ms.lasthandoff: 12/09/2022
+ms.locfileid: '148192646'
 ---
 ## Sobre o {% data variables.product.prodname_dotcom %} para empresas
 
@@ -22,9 +22,9 @@ O {% data variables.product.prodname_dotcom %} é uma plataforma de desenvolvedo
 
 Os desenvolvedores podem armazenar e controlar a versão do código-fonte nos repositórios, usando problemas e projetos a fim de planejar e acompanhar o trabalho. Eles podem realizar a codificação em um ambiente de desenvolvimento hospedado em nuvem, o {% data variables.product.prodname_github_codespaces %}, e revisar as alterações de código uns dos outros com solicitações de pull, usando recursos de segurança de código para manter segredos e vulnerabilidades fora da base de código. Por fim, é possível automatizar o pipeline de compilação, teste e implantação com o {% data variables.product.prodname_actions %} e hospedar pacotes de software com o {% data variables.product.prodname_registry %}.
 
-Quando as empresas adotam o {% data variables.product.prodname_enterprise %}, o ROI (retorno sobre o investimento) é alto. Por exemplo, os desenvolvedores economizam 45 minutos por dia e o tempo de integração e treinamento é reduzido em 40%. Para saber mais, confira [O Impacto Econômico Total do {% data variables.product.prodname_enterprise %}](https://resources.github.com/downloads/TEI-of-GitHub-Enterprise.pdf).
+Quando as empresas adotam o {% data variables.product.prodname_enterprise %}, o ROI (retorno sobre o investimento) é alto. Por exemplo, os desenvolvedores economizam 45 minutos por dia e o tempo de integração e treinamento é reduzido em 40%. Para saber mais, confira [O Impacto Econômico Total do {% data variables.product.prodname_enterprise %}](https://resources.github.com/forrester/).
 
-Para simplificar a administração de todas as etapas do ciclo de vida de desenvolvimento de software, fornecemos um único ponto de visibilidade e gerenciamento chamado conta corporativa. As contas corporativas permitem gerenciar o faturamento e as configurações, aplicar políticas e auditar as pessoas com acesso aos recursos da sua empresa. Para obter mais informações, confira "[Sobre as contas corporativas](/admin/overview/about-enterprise-accounts)".
+Para simplificar a administração de todas as fases do ciclo de vida de desenvolvimento de software, fornecemos um só ponto de visibilidade e gerenciamento chamado conta corporativa. As contas corporativas permitem gerenciar o faturamento e as configurações, aplicar políticas e auditar as pessoas com acesso aos recursos da sua empresa. Para obter mais informações, confira "[Sobre as contas corporativas](/admin/overview/about-enterprise-accounts)".
 
 Opcionalmente, é possível adicionar recursos extras de segurança de código com o {% data variables.product.prodname_GH_advanced_security %}, além de opções de suporte aprimoradas com o {% data variables.contact.premium_support %}. Para saber mais, confira "[Sobre o {% data variables.product.prodname_GH_advanced_security %}](/get-started/learning-about-github/about-github-advanced-security)" e "[Sobre o {% data variables.contact.premium_support %}]({% ifversion ghae %}/enterprise-cloud@latest{% endif %}/support/learning-about-github-support/about-github-premium-support){% ifversion ghae %}" na documentação do {% data variables.product.prodname_ghe_cloud %}.{% else %}.”{% endif %}
 
