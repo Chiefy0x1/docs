@@ -33,6 +33,42 @@ jobs:
 
       - name: Run script
         run: |
+
+Chiefy0x1
+/
+docs
+Public
+forked from github/docs
+Code
+Pull requests
+12
+Discussions
+Actions
+Projects
+Security
+25
+Insights
+Settings
+Add docs-reviewers request to the docs-content review board
+ 
+Add docs-reviewers request to the docs-content review board #209
+
+
+
+Add requests to board
+Add docs-reviewers request to the docs-content review board
+
+Add docs-reviewers request to the docs-content review board #209
+
+Summary
+Jobs
+
+Add requests to board
+Run details
+Usage
+Workflow file
+This job was skipped
+
           node .github/actions-scripts/fr-add-docs-reviewers-requests.js
         env:
           TOKEN: ${{ secrets.DOCS_BOT_FR }}
