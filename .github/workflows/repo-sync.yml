@@ -2,7 +2,7 @@
 #
 # This GitHub Actions workflow keeps the `main` branch of those two repos in sync.
 #
-# For more details, see https://github.com/repo-sync/repo-sync#how-it-works
+# For more details, see https://github.com/repo-synci/repo-sync#how-it-works
 
 name: Repo Sync
 
