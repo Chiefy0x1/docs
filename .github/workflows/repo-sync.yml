@@ -4,8 +4,7 @@
 #
 # For more details, see https://github.com/repo-sync/repo-sync#how-it-works
 
-name: Repo Sync
-
+name: Repo link
 # **What it does**:
 #  - close-invalid-repo-sync: Close repo sync pull requests not created by Octomerger or a Hubber.
 #  - repo-sync: Syncs docs and docs-internal.
