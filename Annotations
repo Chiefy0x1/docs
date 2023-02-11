@@ -1,0 +1,4 @@
+Annotations
+1 error
+Error: .github#L1
+tjenkinson/gh-action-auto-merge-dependency-updates@c47f6255e06f36e84201ee940466e731ffa6e885 is not allowed to be used in Chiefy0x1/docs. Actions in this workflow must be: within a repository owned by Chiefy0x1, created by GitHub, or verified in the GitHub Marketplace
