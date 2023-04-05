@@ -53,7 +53,7 @@ jobs:
     outputs:
       matrix: ${{ steps.set-matrix.outputs.result }}
     steps:
-      - uses: actions/github-script@d556feaca394842dc55e4734bf3bb9f685482fa0
+      - uses: actions/github-script@57c10d434ec3b7112b3635cd63771978bcfc50dc
         id: set-matrix
         with:
           script: |
